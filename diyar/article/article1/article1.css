@@ -26,10 +26,6 @@ li {
   padding: 0 16px;
   margin: 0 auto;
 }
-.readmore {
-  font-size: 0.875rem;
-  text-align: center;
-}
 /*
 疑似要素で下線を設定するために、「position: relative;」を設定
 */
@@ -54,29 +50,18 @@ widthとheightで線の長さと高さを設定
   background: #333;
   transition: all 200ms ease;
 }
-/*
-ホバー時の下線の設定
-「opacity: 0;」下線を非表示
-「transform: translateY(3px);」下に3px移動
-→下に3px移動しながら下線を非表示にする
-*/
-.readmore a:hover::after {
-  opacity: 0;
-  transform: translateY(3px);
-}
 
 /*-------------------------------------------
 header
 -------------------------------------------*/
 /*
-「position: fixed;」でヘッダーを固定し、「z-index: 10;」で前面に表示
+「position: fixed;」でヘッダーを固定し、「z-index: 10;」で前面に表示(現在消去中)
 ※他のコンテンツでpositionをrelative、absolute、fixedのいずれかに
 設定している場合は、z-indexの数値が大きい方が前面に表示される
 */
 #header {
   width: 100%;
   background-color: #fff;
-  position: fixed;
   z-index: 10;
 }
 #header .site-title {
@@ -107,30 +92,24 @@ inline-blockを設定している
   padding: 10px 60px 10px 0;
 }
 
+
 /*-------------------------------------------
-pickup
+main
 -------------------------------------------*/
-#pickup {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 150px;
-  margin-bottom: 60px;
+.article1{
+  text-align: center;
+  background-color: white;
+  padding: 30px 0px 30px 0px;
+  margin: 30px 200px 30px 200px;
+  border:3px solid black;
 }
-#pickup article {
-  width: 32%;
+.article1 h1{
+  border-bottom: 2px solid black;
+  font-size: 40px;
 }
-#pickup .article-title {
-  font-size: 1rem;
-  margin: 10px 0 15px 0;
+.article1 p{
+  font-size: 18px;
 }
-
-
-
-
-
-
-
-
 
 
 /*-------------------------------------------
@@ -220,6 +199,25 @@ footer
     #footer .item {
       width: 100%;
       margin-bottom: 30px;
+    }
+    /*-------------------------------------------
+    main
+    -------------------------------------------*/
+    .article1{
+      text-align: center;
+      background-color: white;
+      border:3px solid black;
+      white-space: nowrap;
+      padding: 0px 50px 0px 50px;
+      box-sizing: border-box;
+      margin: 20px 30px 20px 30px;
+    }
+    .article1 h1{
+      border-bottom: 2px solid black;
+      font-size: 30px;
+    }
+    .article1 p{
+      font-size: 16px;
     }
   }
   
